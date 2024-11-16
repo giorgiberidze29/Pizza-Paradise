@@ -1,0 +1,148 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 220px;
+    background-color: #2d0068;
+    padding-top: 40px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    margin-bottom: 20px;
+}
+
+.sidebar nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    display: block;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar nav ul li a:hover {
+    background-color: #2d0068;
+}
+
+/* Main Content Area */
+.content {
+    margin-left: 240px;
+    width: calc(100% - 240px);
+}
+
+/* Header */
+header {
+    background-color: #2d0068;
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+
+header .logo h1 {
+    font-size: 36px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* Pizza Menu Layout */
+main {
+    padding: 30px;
+}
+
+.pizza-menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.pizza-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    width: 100%;
+    max-width: 350px;
+    cursor: pointer;
+}
+
+.pizza-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.pizza-card img {
+    width: 100%;
+    height: auto;
+    transition: opacity 0.3s ease;
+}
+
+.pizza-card:hover img {
+    opacity: 0.8;
+}
+
+.pizza-card h3 {
+    font-size: 24px;
+    color: #333;
+    margin: 15px 0;
+}
+
+.pizza-card p {
+    font-size: 18px;
+    color: #2d0068;
+    margin-bottom: 20px;
+}
+
+.order-btn {
+    background-color: #2d0068;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.order-btn:hover {
+    background-color: #2d0068;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    margin-top: auto; /* Push footer to the bottom of the page */
+}
+
+footer p {
+    font-size: 14px;
+}
